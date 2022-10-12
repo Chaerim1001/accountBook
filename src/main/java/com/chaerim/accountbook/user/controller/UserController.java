@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @AllArgsConstructor
 public class UserController {
 
-    @GetMapping("/user")
+    @GetMapping("/login")
     public String JoinAndLoginPage(){
         return "user/join-login.html";
     }
