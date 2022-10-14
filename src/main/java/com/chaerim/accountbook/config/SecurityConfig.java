@@ -21,18 +21,18 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/user").hasRole("USER")
+                .antMatchers("/user").hasRole("MEMBER")
                 .antMatchers("/**").permitAll()
                 .and()
                 .formLogin()
-                .usernameParameter("username")
+                .usernameParameter("email")
                 .loginPage("/login")
-                .defaultSuccessUrl("/")
+                .defaultSuccessUrl("/main")
                 .permitAll()
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/")
+                .logoutSuccessUrl("/main")
                 .invalidateHttpSession(true);
 
 

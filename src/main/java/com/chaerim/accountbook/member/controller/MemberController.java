@@ -15,8 +15,13 @@ public class MemberController {
     final private MemberService memberService;
 
     @GetMapping("/login")
-    public String JoinAndLoginPage(){
+    public String joinAndLoginPage(){
         return "user/join-login.html";
+    }
+
+    @GetMapping("/main")
+    public String mainPage(){
+        return "main.html";
     }
 
     @PostMapping("/signup")
