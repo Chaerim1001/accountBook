@@ -1,4 +1,4 @@
-package com.chaerim.accountbook.user.domain;
+package com.chaerim.accountbook.member.domain;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -6,12 +6,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class User extends BaseTimeEntity{
+public class Member extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,15 +24,11 @@ public class User extends BaseTimeEntity{
     @Column
     private String name;
 
-    @Column
-    private Date birth;
-
     @Builder
-    public User(Long id, String email, String password, String name, Date birth) {
+    public Member(Long id, String email, String password, String name) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.name = name;
-        this.birth = birth;
     }
 }

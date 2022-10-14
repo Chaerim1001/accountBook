@@ -1,4 +1,4 @@
-package com.chaerim.accountbook.user.domain;
+package com.chaerim.accountbook.member.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
