@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="UTF-8">
+    <title>지출 기록</title>
+</head>
+<body>
+<h2>지출 기록 페이지</h2>
+
+<form th:action="@{expense}" method="post">
+        <input th:type="date" name="date" placeholder="Date">
+        <input th:type="number" name="expense" placeholder="expense">
+        <input th:type="text" name="explanation" placeholder="explanation">
+    <button type="submit">
+        기록
+    </button>
+</form>
+
+</body>
+</html>

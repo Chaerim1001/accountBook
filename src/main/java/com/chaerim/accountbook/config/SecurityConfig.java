@@ -22,7 +22,7 @@ public class SecurityConfig {
         http
                 .authorizeRequests()
                 .antMatchers("/user").hasRole("MEMBER")
-                .antMatchers("/**").permitAll()
+                .antMatchers("/expense").permitAll()
                 .and()
                 .formLogin()
                 .usernameParameter("email")
@@ -34,7 +34,6 @@ public class SecurityConfig {
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/main")
                 .invalidateHttpSession(true);
-
 
         return http.build();
     }
