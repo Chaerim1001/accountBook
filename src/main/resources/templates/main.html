@@ -9,7 +9,7 @@
 <h2>main 페이지</h2>
 <a sec:authorize="isAnonymous()" th:href="@{/login}">로그인</a>
 <a sec:authorize="isAuthenticated()" th:href="@{/logout}">로그아웃</a>
-<a sec:authorize="isAuthenticated()" th:href="@{/expense}">지출 기록</a>
+<a sec:authorize="isAuthenticated()" th:href="@{/mypage}">마이 페이지</a>
 
 </body>
 </html>

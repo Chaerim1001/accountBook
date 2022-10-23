@@ -3,6 +3,7 @@ package com.chaerim.accountbook.expense.domain;
 import com.chaerim.accountbook.member.domain.BaseTimeEntity;
 import com.chaerim.accountbook.member.domain.Member;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import java.util.Date;
 
 @NoArgsConstructor
 @Entity
+@Getter
 public class Expense extends BaseTimeEntity {
 
     @Id
